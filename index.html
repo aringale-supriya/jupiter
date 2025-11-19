@@ -1,0 +1,23 @@
+1) othr loc-var-www-html-open terminal-  sudo mkdir demo_pro
+2)new terminal-   ngrok 8080  (copy link & paste somwhere) open link 
+**jenkin
+3)jenkin dashboard-new item-projectname-supriya-freestyle-ok
+4)souce code management-choose git- repository url=paste github repo url
+5)branch specifier-check main or master
+6)triggers=github hook trigers-apply save
+**github
+7)setting-webhook-add webhook-
+8)payload url=paste jenkin url/github-webhook/
+9)content-type=application json
+10)send me everything-add webhook
+11)refresh green tick -proper setup
+**jenkin
+12)manually build now-workspace-check our whole project here (ci done)
+(cd)
+13)configure-build step-execute shell= cp -r * var/www/html/demo_pro
+  apply -save
+14)build now -error- new terminal= sudo chown -R jenkins /var/www/html/demo_pro
+  build now error gone 0.0.0.0/demo_pro/index.html
+15)chane some in code github
+16)build now/refresh automatically test
+17) you can see change on 0.0.0.0/demo_pro/index.html
